@@ -1,7 +1,7 @@
 # This is a base dockerfile for deploying apps.
 # VERSION               0.0.1
 
-FROM stackbrew/ubuntu:13.10
+FROM murtaza52/static-base
 
 MAINTAINER Murtaza Husain murtaza52@gmail.com
 
