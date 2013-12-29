@@ -12,6 +12,7 @@ RUN apt-get -y install git-core
 
 # Install nginx
 RUN apt-get -y install libpcre3-dev nginx
+RUN wget -O /etc/nginx/sites-available/default https://raw.github.com/murtaza52/faiz-nginx/master/default
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 RUN update-rc.d nginx defaults
 EXPOSE 80
