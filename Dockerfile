@@ -7,8 +7,8 @@ MAINTAINER Murtaza Husain murtaza52@gmail.com
 
 RUN (apt-get update && apt-get upgrade -y -q && apt-get dist-upgrade -y -q && apt-get -y -q autoclean && apt-get -y -q autoremove)
 
-# Install git
-RUN apt-get -y install git-core
+# Install prereq packages
+RUN apt-get -y install git-core wget
 
 # Install nginx
 RUN apt-get -y install libpcre3-dev nginx
