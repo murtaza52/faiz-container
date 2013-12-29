@@ -16,9 +16,10 @@ RUN wget -O /etc/nginx/sites-available/default https://raw.github.com/murtaza52/
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 RUN update-rc.d nginx defaults
 
+RUN mkdir /var/www
+
 # Get the static-faiz
-Run mkdir /home/ubuntu/apps
-Run git clone https://github.com/murtaza52/faiz-static
+RUN cd /var/www && git clone https://github.com/murtaza52/faiz-static
 
 # Expose ports
 EXPOSE 80
